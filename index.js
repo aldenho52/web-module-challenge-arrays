@@ -44,7 +44,7 @@ function is31Flavors(arr){
 console.log (arr.length === 31)
 }
 
-is31Flavors(originalFlavors)
+// is31Flavors(originalFlavors)
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -59,7 +59,7 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(array, flavor){
     array.unshift(flavor)
-    console.log(array)
+    // console.log(array)
 }
 
 addFlavor(originalFlavors, 'Rainbow Sherbert')
@@ -77,7 +77,7 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 
 function removeLastFlavor(array){
     array.pop()
-    console.log(array)
+    // console.log(array)
 }
 
 removeLastFlavor(originalFlavors)
@@ -91,11 +91,11 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
-
-    /*code here*/
-
+function getFlavorByIndex(array, index){
+    return array[index]
 }
+
+// console.log(getFlavorByIndex(originalFlavors, 10))
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -110,26 +110,30 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(array, flavor){
+    array.splice((array.indexOf(flavor)), 1)
+    return array
 }
-
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
 Your function should accept: 
 
-2 arguments 1 for your new array and one for your original array
+2 arguments: 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+// let copyArray = [...originalFlavors]
+// console.log(copyArray)
 
-    /*code here*/
+let test = []
 
+function copy(array, newArray){
+    newArray = [...array]
+    console.log (newArray)
 }
+
+copy(originalFlavors, test)
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -145,13 +149,18 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
+let filteredArray = []
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+const filterByWord = (array, string) => {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].includes(string)) {
+        filteredArray.push(array[i])
+        }  
+    }
 }
 
+filterByWord(originalFlavors, 'Chocolate')
+console.log(filteredArray)
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
@@ -166,10 +175,13 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
-
-    /*code here*/
-
+function getAverageWordLength(array){
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].includes(' ')) {
+            sum = sum + 
+        }
+    }
 }
 
 
