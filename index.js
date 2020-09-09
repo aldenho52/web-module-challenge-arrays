@@ -1,4 +1,5 @@
-var originalFlavors = ["Banana Nut Fudge",
+var originalFlavors = 
+    ["Banana Nut Fudge",
     "Black Walnut",
     "Burgundy Cherry",
    "Butterscotch Ribbon",
@@ -40,9 +41,9 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(arr){
-console.log (arr.length === 31)
-}
+// function is31Flavors(arr){
+// console.log (arr.length === 31)
+// }
 
 // is31Flavors(originalFlavors)
 
@@ -126,14 +127,15 @@ and should return a new array that is identical to the old array. You can name t
 // let copyArray = [...originalFlavors]
 // console.log(copyArray)
 
-let test = []
+// let test = []
 
-function copy(array, newArray){
-    newArray = [...array]
-    console.log (newArray)
-}
+// function copy(array, newArray){
+//     newArray = [...array]
+//     console.log (newArray)
+// }
 
-copy(originalFlavors, test)
+// copy(originalFlavors, test)
+// console.log(test)
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -160,7 +162,7 @@ const filterByWord = (array, string) => {
 }
 
 filterByWord(originalFlavors, 'Chocolate')
-console.log(filteredArray)
+// console.log(filteredArray)
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
@@ -175,14 +177,24 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
+// 60 words total; there are 4 3-word flavors 
+
 function getAverageWordLength(array){
-    let sum = 0
+    let numberofWords = 0
     for (let i = 0; i < array.length; i++) {
         if (array[i].includes(' ')) {
-            sum = sum + 
+            if {
+                numberofWords = numberofWords + 2
+            }
+        } else {
+            numberofWords = numberofWords + 1
         }
+        }
+    let averageNumberOfWords = (numberofWords/(array.length))
+    console.log(averageNumberOfWords)
     }
-}
+
+    getAverageWordLength(originalFlavors)
 
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
@@ -266,8 +278,16 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
+// function getRandomFlavors(flavor1, flavor2, flavor3, flavor4){
+//     let combinedFlavors = flavor1.concat(flavor2, flavor3, flavor4)
+//     let randomFlavorList = []
+//     for (let i = 0; i < 31; i++) {
+//         randomFlavorList.push(combinedFlavors[Math.floor(Math.random()*102)])
+//     }
+//     console.log(randomFlavorList)
+// }
 
-    /*code here*/
+// getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors)
 
-}
+
+// total is 31 + 23 + 24 + 24 = 102
